@@ -1,0 +1,43 @@
+/* static/already_entered.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+h1 {
+    color: #3d5eaf;
+    text-align: center;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+
+p {
+    text-decoration: none;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #27a2d8;
+    text-align: center;
+}
+.button {
+    background-color: #63eab6;
+    border-radius: 10px;
+    border-color: #63eab6;
+    color: white;
+    top:60%
+}
+
+/* Add more styles as needed */
+

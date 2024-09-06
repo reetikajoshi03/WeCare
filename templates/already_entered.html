@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Care - Already Entered</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='already_entered.css') }}">
+</head>
+<body>
+    <h1>You have already entered patient details</h1>
+    <p>If you need to update or modify your information, please contact support.</p>
+    <p><button class=button><a href="{{ url_for('index') }}">Go to Home Page</button></p>
+</body>
+</html>

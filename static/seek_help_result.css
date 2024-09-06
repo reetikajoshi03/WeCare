@@ -1,0 +1,43 @@
+/* static/styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+h1 {
+    color: #3d5eaf;
+    text-align: left;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    text-align: left;
+}
+
+p {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+
+.button {
+    background-color: #63eab6;
+    align-items:center;
+    border-radius: 10px;
+    border-color: #63eab6;
+    color: white;
+    top:60%
+}
+
+

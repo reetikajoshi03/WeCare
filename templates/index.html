@@ -1,0 +1,35 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Care - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    {% extends 'logo.html' %}
+    {% block title %}We Care - Login{% endblock %}
+
+    {% block content %}
+    <h1>Welcome, {{ username }}!</h1>
+    <h1>WeCare</h1>
+    <h3>Connecting people with similar disease</h3>
+    <br>
+    <h2>About Us</h2>
+    <p>Welcome to WeCare, where you can find support and information from people who have faced similar health challenges.We are a community of people where we try and connect people with similar diseases. Our aim is to provide emotional support to the patients battling a rare or a terminal illness. You can help us grow our community by providing your valuable expereince if you have battled or are battling a rare or a termminal disease.</p>
+
+    <p>Enter your information---
+    <a href="{{ url_for('enter_info') }}">Enter Patient Information</a></p>
+
+    <p>Seek Help---
+        <a href="{{ url_for('seek_help') }}">Seek Help</a></p>
+
+    <p>You can view your patient details---
+    <a href="{{ url_for('patient_details') }}">View Details</a></p>
+    <p><button class=button><a href="{{ url_for('logout') }}">Logout</a></button></p>
+
+    {% endblock %}
+</body>
+</html>

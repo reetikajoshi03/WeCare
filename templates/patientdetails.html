@@ -1,0 +1,35 @@
+<!-- patientdetails.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='patientdetails.css') }}">
+</head>
+<body>
+    {% extends 'logo.html' %}
+    {% block title %}We Care - Login{% endblock %}
+
+    {% block content %}
+    <h1>Patient Details</h1>
+    {% if patient_details %}
+        <p>Name: {{ patient_details[2] }}</p>
+        <p>Age: {{ patient_details[3] }}</p>
+        <p>Gender: {{ patient_details[4] }}</p>
+        <p>Disease: {{ patient_details[5] }}</p>
+        <p>Symptoms: {{ patient_details[6] }}</p>
+        <p>Hospital: {{ patient_details[7] }}</p>
+        <p>Doctor: {{ patient_details[8] }}</p>
+        <p>Expenditure: {{ patient_details[9] }}</p>
+        <p>Email: {{ patient_details[10] }}</p>
+        <p>Remarks: {{ patient_details[11] }}</p>
+    {% else %}
+        <p>No patient details found.</p>
+    {% endif %}
+    <br>
+    <p><button class=button><a href="{{ url_for('index') }}">Go to Home Page</button></p>
+
+        {% endblock %}
+</body>
+</html>

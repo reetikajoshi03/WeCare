@@ -1,0 +1,32 @@
+<!-- seek_help_result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seek Help Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='seek_help_result.css') }}">
+</head>
+<body>
+    <h1>Seek Help Result</h1>
+    {% if matching_patient_details %}
+        <p>Matching Patient Details:</p>
+        <ul>
+            {% for patient in matching_patient_details %}
+                <li>Name: {{ patient[2] }}<br>
+                    Age: {{ patient[3] }}<br>
+                    Gender: {{ patient[4] }}<br>
+                    Disease: {{ patient[5] }}<br>
+                    Symptoms: {{ patient[6] }}<br>
+                    Hospital Name: {{ patient[7] }}<br>
+                    Doctor Name: {{ patient[8] }}<br>
+                    Email: {{ patient[10] }}</li><br>   
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No matching patient details found.</p>
+    {% endif %}
+    <br>
+    <button class=button><a href="{{ url_for('index') }}">Go to Home Page</a></button>
+</body>
+</html>

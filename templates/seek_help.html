@@ -1,0 +1,41 @@
+<!-- seek_help.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seek Help</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='seek_help.css') }}">
+</head>
+<body>
+    <h1>Seek Help</h1>
+    <form action="/seek_help" method="post">
+
+        <label for="seek_person_id">Your Unique Identifier (e.g., User ID or Username):</label>
+        <input type="text" id="seek_person_id" name="seek_person_id" required><br>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <!-- Add more options as needed -->
+        </select><br>
+
+        <label for="disease_name">Disease:</label>
+        <input type="text" id="disease_name" name="disease_name" required><br>
+
+        <label for="symptoms">Symptoms:</label>
+        <textarea id="symptoms" name="symptoms" required></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <p><button class=button><a href="{{ url_for('index') }}">Go to Home Page</button></p>
+</body>
+</html>

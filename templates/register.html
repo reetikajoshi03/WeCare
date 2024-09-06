@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Care - Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+</head>
+<body>
+    {% extends 'logo.html' %}
+    {% block title %}We Care - Login{% endblock %}
+
+    {% block content %}
+    <h1>WeCare</h1>
+    <h3>Connecting people with similar disease</h3>
+    <br>
+    <h2>About Us</h2>
+    <h7>Welcome to WeCare, where you can find support and information from people who have faced similar health challenges.We are a community of people where we try and connect people with similar diseases. Our aim is to provide emotional support to the patients battling a rare or a terminal illness. You can help us grow our community by providing your valuable expereince if you have battled or are battling a rare or a termminal disease.</h7>
+    <h1>Register</h1>
+    {% if message %}
+        <p style="color: red;">{{ message }}</p>
+    {% endif %}
+    <form action="/register" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}" title="Password must contain at least 8 characters, including at least one number, one uppercase letter, one lowercase letter, and one special character."><br>
+
+        <input type="submit" value="Register">
+    </form>
+    <!-- Add a link to the login page -->
+    <p>Already have an account?
+    <a href="{{ url_for('login') }}">Login</a></p>
+
+    {% endblock %}
+</body>
+</html>
